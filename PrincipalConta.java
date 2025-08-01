@@ -4,44 +4,45 @@ public class PrincipalConta{
         Conta t = new Conta(8922, "Thayná");
         Conta p = new Conta(1024, "Pedro");
 
-          System.out.println("----------------------------");
-
+        System.out.println("---------Estado Inicial--------");
         System.out.println(a);
         System.out.println(t);
         System.out.println(p);
       
-        System.out.println("----------------------------");
-
+        //Depósitos
         a.Depositar(50);
         t.Depositar(35);
         p.Depositar(90);
 
-         System.out.println("----------------------------");
-
-
+        System.out.println("-----------Após Deposito-----------");
         System.out.println(a);
         System.out.println(t);
         System.out.println(p);
          
-        System.out.println("----------------------------");
+        //Alterar nome
+        a.setNomeCliente("Adrielle");
+        t.setNomeCliente("Thayná");
+        p.setNomeCliente("Paulo");
 
 
-        a.setNomeCliente("Delfino");
-        System.out.println(a);System.out.println(a);
+        //Saques
+        a.Sacar(300);
+        t.Sacar(900);
+        p.Sacar(200);
 
-
-        t.setNomeCliente("Evellyn");
-         System.out.println(a);System.out.println(t);
-
-
-        p.setNomeCliente("Ernesto");
+        System.out.println("----------Após Saques-----------");
+        System.out.println(a);
+        System.out.println(t);
         System.out.println(p);
+
+        //Desativar contas
+        a.Desativar();
+        t.Desativar();
+        p.Desativar();
+
+        System.out.println("---------Pós Desativação--------");
+        System.out.println(a);
+        System.out.println(t);
         
-    
-
-
-
-
     }
 }
-
