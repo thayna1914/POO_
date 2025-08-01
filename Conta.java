@@ -27,7 +27,7 @@ public void Depositar(double valor){
 }
 
 public void Sacar(double valor){
-    if(valor <= saldo && estaAtiva){
+    if(valor <= saldo && estaAtiva && valor > 0){
         saldo -= valor;
     } else {
         System.out.println("Algo deu errado, tente novamente!");
@@ -76,8 +76,12 @@ public boolean getEstaAtiva(){
 
 public void setEstaAtiva(boolean novoEstaAtiva){
     this.estaAtiva = novoEstaAtiva;
+    
 }
 
+public void exibir(){
+    System.out.println(toString());
+}
 public String toString(){
     return String.format("Número da conta: %d, Nome do cliente: %s, Saldo: %d, Ativada: %s", numeroConta, nomeCliente, saldo, estaAtiva ? "sim" : "não");
 }
