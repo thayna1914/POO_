@@ -1,22 +1,15 @@
-import java.util.Scanner;
-
-
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        Turma turma = new Turma();
+        Mercadinho m = new Mercadinho();
+    
 
-        turma.adicionarAluno(new Aluno("Thayná", 1, 10.0, 10.0));
-        turma.adicionarAluno(new Aluno("Adrielle", 2, 7.0, 6.0));
-        turma.adicionarAluno(new Aluno("Herllan", 3, 5.0, 9.0));
-        
-        turma.ListarAlunos();
+        m.adicionarCliente(new ClienteOuroVip("Damon", 700, "0101", "Guarabira"));
+        m.adicionarCliente(new ClienteRegular("Stefan", 300, "0202", "Guarabira"));
+        m.adicionarCliente(new ClienteOuroVip("Herllan", 100, "0303", "Alagoa Grande"));
+        m.adicionarCliente(new ClienteVip("Thayná", 200, "1915", "Alagoinha"));
+        m.adicionarCliente(new ClienteVip("Emilly", 2019, "2911"), "Guarabira");
 
-        System.out.println("===== Buscar Aluno =====");
-        System.out.println("Digite a matrícula");
-
-        int matricula = sc.nextInt();
-        turma.buscarPorMatricula(matricula);
-        sc.close();
+        m.imprimirClientes();
     }
+
 }
